@@ -1,0 +1,26 @@
+{
+    "id": "E6704BC5",
+    "path": "~/omarprojects/problem  set 4/problem set 3 finished.R",
+    "project_path": "problem set 3 finished.R",
+    "type": "r_source",
+    "hash": "3876666171",
+    "contents": "",
+    "dirty": false,
+    "created": 1667819414547.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "70,30",
+        "scrollLine": "53"
+    },
+    "folds": "3|19|16|0|\n11|28|14|0|\n63|22|68|0|\n83|24|91|0|\n96|14|108|0|\n138|32|143|0|\n",
+    "lastKnownWriteTime": 1668038910,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1669301396427,
+    "read_only": false,
+    "read_only_alternatives": []
+}
