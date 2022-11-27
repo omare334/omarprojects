@@ -82,3 +82,8 @@ survfit2(s2 ~ 1, data = lung) %>%
 #table of survivial factor 
 summary(s4)
 
+# b2 veterans data set  ---------------------------------------------------
+
+
+
+
