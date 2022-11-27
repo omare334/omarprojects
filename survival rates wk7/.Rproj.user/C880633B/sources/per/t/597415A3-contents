@@ -10,6 +10,7 @@ library(lubridate)
 library(gtsummary)
 library(tidycmprsk)
 library(condSURV)
+library(purrr)
 #adding age thorugh out follow up 
 s_rates_age<-s_rates %>%
   mutate(totaltime = s_rates$age_endfup - s_rates$age_enter)
@@ -83,7 +84,47 @@ survfit2(s2 ~ 1, data = lung) %>%
 summary(s4)
 
 # b2 veterans data set  ---------------------------------------------------
+#uploading roterdam file
+rotterdam<-read.csv("rotterdam.csv")
+#filter data for chemo results 
+lung
 
-
-
-
+# calculating kaplan-meir plot and table ----------------------------------
+Surv(lung$time, lung$status)
+kp_veteran <- survfit(Surv(time, status) ~ 1, data = veteran)
+survfit2(Surv(time, status) ~ 1, data = lung) %>% 
+  ggsurvfit() +
+  labs(
+    x = "Days",
+    y = "Overall survival probability"
+  ) + 
+  add_confidence_interval() +
+  add_risktable()
+#survival probability day 180
+summary(survfit(Surv(time, status) ~ 1, data = veteran), times = 180)
+#death probability day 30
+summary(survfit(Surv(time, status) ~ 1, data = veteran), times = 30)
+#median survival
+survfit(Surv(time, status) ~ 1, data = veteran)
+#stratifing for chemo 
+survfit(Surv(time, status) ~ trt , data = veteran)
+#plotting with new strata
+survfit2(Surv(time, status) ~ trt, data = veteran) %>% 
+  ggsurvfit() +
+  labs(
+    x = "Days",
+    y = "Overall survival probability"
+  ) + 
+  add_confidence_interval() +
+  add_risktable()
+#log rank statistics 
+survdiff(Surv(time, status) ~ trt, data = veteran)
+#cannot accept null hyothesis that hazard is the same 
+#log rank for cell type 
+survdiff(Surv(time, status) ~ celltype, data = veteran)
+#reject null hypothesis therefore hazard is different 
+cox_vet<-coxph(Surv(time, status) ~ trt, data = veteran)
+summary(cox_vet)
+#proptional hazard assumption
+phtest <- cox.zph(cox_vet)
+plot(phtest)

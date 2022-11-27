@@ -3,7 +3,7 @@
     "path": "~/omarprojects/survival rates wk7/survival_rates_script.R",
     "project_path": "survival_rates_script.R",
     "type": "r_source",
-    "hash": "3156339044",
+    "hash": "3127059744",
     "contents": "",
     "dirty": false,
     "created": 1669568683558.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "85,0",
-        "scrollLine": "62"
+        "cursorPosition": "130,0",
+        "scrollLine": "107"
     },
     "folds": "",
-    "lastKnownWriteTime": 1669568841,
+    "lastKnownWriteTime": 1669573507,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1669568841763,
+    "last_content_update": 1669573507351,
     "read_only": false,
     "read_only_alternatives": []
 }
