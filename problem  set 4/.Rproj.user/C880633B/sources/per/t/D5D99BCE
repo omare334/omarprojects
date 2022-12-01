@@ -1,0 +1,25 @@
+{
+    "id": "D5D99BCE",
+    "path": null,
+    "project_path": null,
+    "type": "r_code_browser",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1669569555749.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "context": ".GlobalEnv:::probability"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 3328260429870820705,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1669569555749,
+    "read_only": false,
+    "read_only_alternatives": []
+}
