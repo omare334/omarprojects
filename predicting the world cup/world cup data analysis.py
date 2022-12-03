@@ -8,6 +8,16 @@ df = pd.read_csv('players_fifa23.csv')
 print(df.head())
 #read last five rows
 print(df.tail())
+#read columns
+print(df.columns)
+#read shape
+print(df.shape)
+#make new dataframe with LongShots and Agression and Vision
+df1 = df[['LongShots','Aggression','Vision']]
+print(df1.head())
+
+
+
 
 
 
