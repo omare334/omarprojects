@@ -12,10 +12,19 @@ print(df.tail())
 print(df.columns)
 #read shape
 print(df.shape)
-#make new dataframe with LongShots and Agression and Vision
-df1 = df[['LongShots','Aggression','Vision']]
-print(df1.head())
-
+#plot histogram for all collumns using matplotlib
+import matplotlib.pyplot as plt
+plt.hist(df['Overall'], bins=10)
+plt.show()
+#qqplot for all collumns using matplotlib
+import matplotlib.pyplot as plt
+import scipy.stats as stats
+stats.probplot(df['Overall'], dist="norm", plot=plt)
+plt.show()
+#boxplot for all collumns using matplotlib
+import matplotlib.pyplot as plt
+plt.boxplot(df['Overall'])
+plt.show()
 
 
 
